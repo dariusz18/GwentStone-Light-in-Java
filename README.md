@@ -1,8 +1,8 @@
-# ♟️ GwentStone Light — Java
+# GwentStone Light — Java
 
 A card game engine inspired by Gwent & Hearthstone, built in Java.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 | Class | Role |
 |---|---|
@@ -15,14 +15,14 @@ A card game engine inspired by Gwent & Hearthstone, built in Java.
 | `Player` | Game-logic player (draws cards, tracks mana) |
 | `Helpers` | Static utilities — card conversion, attack/freeze state resets |
 
-## 🔄 Game Flow
+## Game Flow
 
 1. Players are initialized with their decks, heroes, and starting conditions
 2. A `switch` dispatches each input command to `ActionHandler`
 3. `ActionHandler` resolves the command using the current `Server` state
 4. The game loop continues until a win condition is met
 
-## 💡 Design Decisions
+## Design Decisions
 
 - **Hero & Minion merged into `Card`** — avoids casting overhead and simplifies logic
 - **`Server` as a state container** — single source of truth for the entire game
